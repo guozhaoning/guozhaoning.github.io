@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://guozhaoning.github.io</id>
     <title>guozhaoning</title>
-    <updated>2021-03-02T16:14:58.449Z</updated>
+    <updated>2021-03-02T16:18:37.744Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://guozhaoning.github.io"/>
     <link rel="self" href="https://guozhaoning.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://guozhaoning.github.io/images/avatar.png</logo>
     <icon>https://guozhaoning.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, guozhaoning</rights>
+    <entry>
+        <title type="html"><![CDATA[Object实例占用多少字节]]></title>
+        <id>https://guozhaoning.github.io/post/object-shi-li-zhan-yong-duo-shao-zi-jie/</id>
+        <link href="https://guozhaoning.github.io/post/object-shi-li-zhan-yong-duo-shao-zi-jie/">
+        </link>
+        <updated>2021-03-02T16:16:11.000Z</updated>
+        <content type="html"><![CDATA[<p>object由什么组成</p>
+<p>对象头---64位--8个字节</p>
+<p>类型指针---jvm多少位就是多少个字节，但是jvm虚拟机默认开启了压缩，所有默认64位被压缩成了32位，也就是4个字节</p>
+<p>实例数据---如果对象的实例有数据，则数据有多少个字节就是多少，这个被称为oops，new一个对象没有字节</p>
+<p>对齐---向上补齐到8的倍数，比如上三个数字加起来为12，则对齐数为4，16为8的倍数</p>
+<p>所以 Object o = new Object(); o有16个字节 8+4+0+4</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[# Servlet核心源码理解]]></title>
         <id>https://guozhaoning.github.io/post/servlet-he-xin-yuan-ma-li-jie/</id>

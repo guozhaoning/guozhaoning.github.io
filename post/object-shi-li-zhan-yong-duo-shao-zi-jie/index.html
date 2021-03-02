@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | guozhaoning</title>
+<title>Object实例占用多少字节 | guozhaoning</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,11 @@
 
 
 
-    <meta name="description" content="温故而知新">
+    <meta name="description" content="object由什么组成
+对象头---64位--8个字节
+类型指针---jvm多少位就是多少个字节，但是jvm虚拟机默认开启了压缩，所有默认64位被压缩成了32位，也就是4个字节
+实例数据---如果对象的实例有数据，则数据有多少个字节就是多少..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,35 +92,34 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://guozhaoning.github.io/post/hello-gridea/">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+          <div class="post-detail">
+            <h2 class="post-title">Object实例占用多少字节</h2>
+            <div class="post-date">2021-03-03</div>
+            
+            <div class="post-content" v-pre>
+              <p>object由什么组成</p>
+<p>对象头---64位--8个字节</p>
+<p>类型指针---jvm多少位就是多少个字节，但是jvm虚拟机默认开启了压缩，所有默认64位被压缩成了32位，也就是4个字节</p>
+<p>实例数据---如果对象的实例有数据，则数据有多少个字节就是多少，这个被称为oops，new一个对象没有字节</p>
+<p>对齐---向上补齐到8的倍数，比如上三个数字加起来为12，则对齐数为4，16为8的倍数</p>
+<p>所以 Object o = new Object(); o有16个字节 8+4+0+4</p>
 
-                </div>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://guozhaoning.github.io/post/servlet-he-xin-yuan-ma-li-jie/">
+                  <h3 class="post-title">
+                    # Servlet核心源码理解
+                  </h3>
+                </a>
               </div>
-              
-                <a class="right" href="https://guozhaoning.github.io/post/hello-gridea/">
-                  <div class="feature-container" style="background-image: url('https://guozhaoning.github.io/post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+
+          </div>
 
         </div>
       </div>
